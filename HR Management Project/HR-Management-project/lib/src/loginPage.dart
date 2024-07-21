@@ -26,21 +26,20 @@ final GlobalKey<FormState> _formStateKey = GlobalKey<FormState>();
 String successMessage = '';
 
 class _LoginPageState extends State<LoginPage> {
- /////////
+
   Future<User> loginUser() async {
     try {
       await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: _email, password: _password);
       Navigator.push(context, MaterialPageRoute(builder: (context) => Contacts()));
-      // since something changed, let's notify the listeners...
+      
       Fluttertoast.showToast(
         msg: 'Login successful',
         toastLength: Toast.LENGTH_SHORT,
         gravity: ToastGravity.BOTTOM,
       );
     }  catch (e) {
-      // throw the Firebase AuthException that we caught
-     // throw new AuthException(e.code, e.message);
+      
       Fluttertoast.showToast(
         msg: 'Please enter a valid email and password or register',
         toastLength: Toast.LENGTH_SHORT,
@@ -48,7 +47,7 @@ class _LoginPageState extends State<LoginPage> {
       );
     }
   }
-/////////
+
   Widget _backButton() {
     return InkWell(
       onTap: () {
@@ -95,9 +94,8 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
-  //
 
-  //TODO: change Flat to Inkwell on both
+  
   Widget _submitButton() {
     return Container(
       width: MediaQuery.of(context).size.width,
@@ -269,7 +267,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
   String validateEmail(String value) {
     Pattern pattern =
         r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]"
@@ -282,8 +280,7 @@ class _LoginPageState extends State<LoginPage> {
       return null;
   }
 
-  //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
   Widget _emailPasswordWidget() {
     return Padding(
       padding: const EdgeInsets.only(top: 10, bottom: 10),
@@ -340,7 +337,7 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
