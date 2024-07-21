@@ -159,7 +159,7 @@ class _SignUpPageState extends State<SignUpPage> {
           ]),
     );
   }
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
   String validateEmail(String value) {
     Pattern pattern =
         r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]"
@@ -171,7 +171,7 @@ class _SignUpPageState extends State<SignUpPage> {
     else
       return null;
   }
-  /////////////////////////////////////////////////////////////////////////////////////////////////////////
+ 
   Widget _emailPasswordWidget() {
     return Padding(
       padding: const EdgeInsets.only(top: 10,bottom: 10),
@@ -214,7 +214,7 @@ class _SignUpPageState extends State<SignUpPage> {
       ),
     );
   }
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
