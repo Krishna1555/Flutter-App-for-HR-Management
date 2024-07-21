@@ -13,7 +13,7 @@ class Contacts extends StatefulWidget {
 
 class _ContactsState extends State<Contacts> {
 
-  //the pages with data and the starting index 0 for the first page
+  
   int _currentIndex = 0;
   final List<Widget> _children = [
     ContactsPage(),
@@ -21,7 +21,7 @@ class _ContactsState extends State<Contacts> {
     History(),
   ];
 
-  //method for ontap that changes current index to the other pages
+ 
   void onTappedBar(int index){
     setState(() {
       _currentIndex = index;
