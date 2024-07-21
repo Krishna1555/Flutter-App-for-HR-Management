@@ -3,5 +3,3 @@ HR Management simple app built with flutter that uses firebase for user registra
 
 this app is only a front-end with little back-end code 
 it was made as a practice project.
-
-apk in https://github.com/AhmedMamdouhMoussa/HR-Management-project/releases/tag/apk
